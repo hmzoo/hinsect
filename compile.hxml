@@ -1,0 +1,9 @@
+-cp src
+-lib heaps
+-lib hlsdl	
+#-lib hldx for windows
+-hl mainapp.hl
+-main MainApp
+-D windowSize=500x500
+-D windowTitle=hinsect
+-D no-deprecation-warnings
