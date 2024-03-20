@@ -23,7 +23,7 @@ class  MainApp  extends hxd.App {
     }
 
     override function update(dt:Float) {
-      var d=Math.PI*dt/10;
+      var d=Math.PI*dt/2;
       r=r+d;
       if(r>2*Math.PI){r=r-2*Math.PI;}
 
