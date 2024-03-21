@@ -1,0 +1,24 @@
+
+
+legs: [
+  {
+cx: 100,
+cy: 100,
+rx: 20,
+ry: 50
+inita: 30,
+
+bones: [
+      { length: 40, width: 20,shor: 1,maxa: 150,mina: 30,flex: 10
+      },
+      { length: 40, width: 20,shor: 1,maxa: 150,mina: 30,flex: 10
+      },
+      { length: 40, width: 20,shor: 1,maxa: 150,mina: 30,flex: 10
+      },
+      { length: 40, width: 20,shor: 1,maxa: 150,mina: 30,flex: 10
+      },
+      { length: 40, width: 20,shor: 1,maxa: 150,mina: 30,flex: 10
+      },
+    ]
+  }
+]
