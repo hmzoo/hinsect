@@ -11,7 +11,7 @@ class  MainApp  extends hxd.App {
  
     var frame:hinsect.Frame;
     var leg:hinsect.Leg;
-    var segment:hinsect.Segment;
+    var seg_a:hinsect.Segment;
     var r:Float;
 
     override  function  init() {
@@ -21,24 +21,26 @@ class  MainApp  extends hxd.App {
 
         //leg= new Leg(frame);
 
-  segment=  new Segment(80, 30,20,Math.PI/12,Math.PI-Math.PI/12,10);
-  segment.angle = Math.PI/3+Math.PI/2;
-  segment.x=SCREEN_WIDTH/2;
-  segment.y=SCREEN_HEIGHT/2;
-  s2d.addChild(segment);
+  seg_a=  new Segment(80, 30,20);
+  seg_a.x=SCREEN_WIDTH/2;
+  seg_a.y=SCREEN_HEIGHT/2;
+  seg_a.set_angle_start (Math.PI/3+Math.PI/2);
 
-  segment.redraw();
+  seg_a.place(50,80,0);
+  s2d.addChild(seg_a);
+
+  seg_a.redraw();
 
     }
 
     override function update(dt:Float) {
-      var d=Math.PI*dt/2;
-      r=r+d;
-      segment.oangle=r;
+      r=r+Math.PI*dt/2;
+      if(r>2*Math.PI){r=r-2*Math.PI;}
+    //  segment.abs_a=r;
     //   
-       if(r>2*Math.PI){r=r-2*Math.PI;}
+      
 
-       segment.redraw();
+       seg_a.redraw();
    
     }
 
