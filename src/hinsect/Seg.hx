@@ -2,6 +2,8 @@ package hinsect;
 
 
 class Seg {
+    public var index:Int;
+    public var next:Seg;
     public var length:Float;
     public var angle:Float;
 
@@ -11,17 +13,29 @@ class Seg {
     public var ex:Float
     public var ey:Float
 
-    public function new(l){
+    public function addSeg(a,l){
+
+    }
+
+    public function new(a,l){
         length=l;
-        angle=Pit.PI;
-        place (0,0,0)
+        angle=a;
+        place (0,0,0);
+    }
+
+    public function addSeg(a,l){
+        var s= new Seg(a,l)
+        s.place(ex,ey,aa)
+        
     }
 
     public function place(x,y,aa){
+        var a=angle+Pit.rev(aa);
         sx=x;
         sy=y;
-        ex=adx(angle+aa,l);
-        ey=ady(angle+aa,l);
+        ex=sx+adx(a,l);
+        ey=sy+ady(a,l);
+        next.place(ex,ey,a);
     }
 
 }
