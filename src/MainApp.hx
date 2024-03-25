@@ -16,20 +16,23 @@ class  MainApp  extends hxd.App {
 
     override  function  init() {
         r=0;
+        var a = -20*Pit.PI/3;
+        var z= Pit.deg(a);
+        trace(z);
 
-        frame= new Frame(s2d);
+  //       frame= new Frame(s2d);
 
-        //leg= new Leg(frame);
+  //       //leg= new Leg(frame);
 
-  seg_a=  new Segment(80, 30,20);
-  seg_a.x=SCREEN_WIDTH/2;
-  seg_a.y=SCREEN_HEIGHT/2;
-  seg_a.set_angle_start (Math.PI/3+Math.PI/2);
+  // seg_a=  new Segment(80, 30,20);
+  // seg_a.x=SCREEN_WIDTH/2;
+  // seg_a.y=SCREEN_HEIGHT/2;
+  // seg_a.set_angle_start (Math.PI/3+Math.PI/2);
 
-  seg_a.place(50,80,0);
-  s2d.addChild(seg_a);
+  // seg_a.place(50,80,0);
+  // s2d.addChild(seg_a);
 
-  seg_a.redraw();
+  // seg_a.redraw();
 
     }
 
@@ -40,7 +43,7 @@ class  MainApp  extends hxd.App {
     //   
       
 
-       seg_a.redraw();
+       //seg_a.redraw();
    
     }
 
