@@ -9,7 +9,7 @@ final SCREEN_HEIGHT=500;
 
 class Frame extends h2d.Object {
 
-    var g:h2d.Graphics;
+    public var g:h2d.Graphics;
 	var itv:h2d.Interactive;
 
     var legs:Array<Leg>;

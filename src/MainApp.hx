@@ -20,7 +20,18 @@ class  MainApp  extends hxd.App {
         var z= Pit.deg(a);
         trace(z);
 
-  //       frame= new Frame(s2d);
+        var seg:hinsect.Seg=new Seg(Pit.rad(120),50);
+        seg.addSeg(Pit.rad(120),50);
+        seg.addSeg(Pit.rad(120),50);
+ 
+        frame= new Frame(s2d);
+        frame.g.lineStyle(2, 0xEE2A9C);
+        var s=seg;
+        while (s!=null) {
+          frame.g.moveTo(s.sx, s.sy);
+          frame.g.lineTo(s.ex, s.ey);
+          s=s.next;
+        }
 
   //       //leg= new Leg(frame);
 

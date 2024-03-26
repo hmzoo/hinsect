@@ -33,19 +33,19 @@ class Pit {
         return r(a+PI/2);
     }
 
-    public function toa(x:Float,y:float):Float{
+    public static function toa(x:Float,y:Float):Float{
         return r(Math.atan2(y, x));
     }
 
-    public function dis(x,y){
-        return r(Math.sqrt(x*x,y*y));
+    public static function dis(x,y){
+        return r(Math.sqrt(x*x+y*y));
     }
 
-    public function adx(a,l):Float{
-        return l*Math.cos(a)
+    public static function adx(a:Float,l:Float):Float{
+        return l*Math.cos(a);
     }
-    public function ady(a,l):Float{
-        return l*Math.sin(a)
+    public static function ady(a:Float,l:Float):Float{
+        return l*Math.sin(a);
     }
 
 }

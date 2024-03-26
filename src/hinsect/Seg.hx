@@ -7,35 +7,39 @@ class Seg {
     public var length:Float;
     public var angle:Float;
 
-    public var aa:Float
-    public var sx:Float
-    public var sy:Float
-    public var ex:Float
-    public var ey:Float
+    public var aa:Float;
+    public var sx:Float;
+    public var sy:Float;
+    public var ex:Float;
+    public var ey:Float;
 
-    public function addSeg(a,l){
 
-    }
 
     public function new(a,l){
         length=l;
         angle=a;
-        place (0,0,0);
+        place (0,0,-Pit.PI);
     }
 
     public function addSeg(a,l){
-        var s= new Seg(a,l)
-        s.place(ex,ey,aa)
-        
+        if(next == null) {
+            next = new Seg(a,l);
+            next.place(ex,ey,aa);
+        }else{
+            next.addSeg(a,l);
+        }       
+           
     }
 
-    public function place(x,y,aa){
-        var a=angle+Pit.rev(aa);
+    public function place(x,y,a){
+        aa=angle+Pit.rev(a);
         sx=x;
         sy=y;
-        ex=sx+adx(a,l);
-        ey=sy+ady(a,l);
-        next.place(ex,ey,a);
+        ex=sx+Pit.adx(aa,length);
+        ey=sy+Pit.ady(aa,length);
+        if(next !=null){
+         next.place(ex,ey,aa);
+        }
     }
 
 }
